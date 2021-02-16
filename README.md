@@ -45,15 +45,11 @@
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-    ```
-
--              $table->string('title');
--              $table->string('content');
-              $table->timestamps();
+    +        $table->string('title');
+    +        $table->string('content');
+            $table->timestamps();
           });
     }
-    ```
-
     ```
 
 1.  run the migration to create `posts` table in our database
@@ -75,6 +71,7 @@
 ## Create Controller
 
 1.  generate new controller
+
     ```bash
     php artisan make:controller PostsApiController
     ```
