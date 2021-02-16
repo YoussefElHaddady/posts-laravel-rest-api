@@ -15,7 +15,6 @@
     php artisan migrate
     ```
 1.  create the model named `Post` and the migration file
-    run command
 
     ```bash
     php artisan make:model Post -m
@@ -41,7 +40,7 @@
 
 1.  change migration file to:
 
-    ```php
+    ```diff
     public function up()
     {
         Schema::create('posts', function (Blueprint $table) {
@@ -49,19 +48,17 @@
     +        $table->string('title');
     +        $table->string('content');
             $table->timestamps();
-        });
+          });
     }
     ```
 
 1.  run the migration to create `posts` table in our database
-    run command
 
     ```bash
     php artisan migrate
     ```
 
 1.  insert some data with `tinker`
-    run command
 
     ```bash
     php artisan tinker
@@ -74,7 +71,7 @@
 ## Create Controller
 
 1.  generate new controller
-    run command
+
     ```bash
     php artisan make:controller PostsApiController
     ```
